@@ -1,0 +1,26 @@
+import "pe"
+
+rule familia21
+{
+    meta:
+        author = "Douglas Poerschke Rocha"
+        description = "malware familia 21 http://lpro/MAL/mal.php?mal=30"
+
+    strings:
+
+	$s1 = "RLG_SCHTimer"
+	$s2 = "cnx2Connect"
+	$s3 = "RLG_RECEBETimer"
+	$s4 = "fgr_top4"
+	$s5 = "fgr_top3"
+	$s6 = "fgr_top2"
+	$s7 = "fgr_log3"
+	$s8 = "fgr_fund1"
+	$s9 = "Label19MouseLeave"
+
+
+
+    condition:
+        5 of ($s*)
+}
+

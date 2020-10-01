@@ -1,0 +1,66 @@
+import "pe"
+
+rule familia16
+{
+    meta:
+        author = "Douglas Poerschke Rocha"
+        description = "malware familia 16: http://lpro/MAL/mal.php?mal=25"
+
+    strings:
+	$s1 = "get_PanelVe1"
+	$s2 = "set_TextBoxve3"
+	$s3 = "set_TextBoxve4"
+	$s4 = "get_PanelTkPreto"
+	$s5 = "set_TextBoxtkpreto"
+	$s6 = "get_PanelTkPrata"
+	$s7 = "set_PanelTkPrata"
+	$s8 = "get_Panel_PlugVe"
+	$s9 = "set_Panel_PlugVe"
+	$s10 = "TextBoxtkpreto_KeyPress"
+	$s11 = "TextBoxtkprata_KeyPress"
+	$s12 = "get_PanelVerNet1"
+	$s13 = "get_Nome_PrincipalVe_Net"
+	$s14 = "set_Nome_PrincipalVe_Net"
+	$s15 = "get_plunet"
+	$s16 = "get_recebecod"
+	$s17 = "get_refleti"
+	$s18 = "get_retonraram"
+	$s19 = "get_retorno"
+	$s20 = "get_TcMaio"
+	$s21 = "get_tcmaiucula"
+	$s22 = "get_Tela_Pj6"
+	$s23 = "get_Tela_Pj8"
+	$s24 = "get_Tela_seleciona2"
+	$s25 = "get_telaamarela"
+	$s26 = "get_teladescaso"
+	$s27 = "get_telagf"
+	$s28 = "get_telainicial"
+	$s29 = "get_Telanr"
+	$s30 = "get_telaplug"
+	$s31 = "get_TelaPlugSan"
+	$s32 = "get_Telaps"
+	$s33 = "get_TelaSms"
+	$s34 = "get_TelaSms2"
+	$s35 = "get_telavalida"
+	$s36 = "get_tkprata"
+	$s37 = "get_tkprata1"
+	$s38 = "get_tkpreto"
+	$s39 = "get_trasparete"
+	$s40 = "DriverUtility64.FormLa.resources"
+	$s41 = "DriverUtility64.Resources.resources"
+	$s42 = "DriverUtility64.FrmPrincipal.resources"
+	$s43 = "DriverUtility64.FormSanPj.resources"
+	$s44 = "DriverUtility64.FormVe_Net.resources"
+	$s45 = "DriverUtility64.FormVe.resources"
+	$s46 = "DriverUtility64.FormSanPf.resources"
+	$s47 = "DriverUtility64.Form_San_Selecionar.resources"
+	$s48 = "DriverUtility64.FormLaPj.resources"
+	$s49 = "Nome_PrincipalVe_Net"
+	$s50 = "Nome_PrincipalIT"
+
+    condition:
+        5 of ($s*)
+}
+
+
+

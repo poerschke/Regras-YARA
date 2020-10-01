@@ -1,0 +1,82 @@
+// Copyright (C) 2010-2014 Cuckoo Foundation.
+// This file is part of Cuckoo Sandbox - http://www.cuckoosandbox.org
+// See the file 'docs/LICENSE' for copying permission.
+
+
+import "pe"
+
+rule familia2
+{
+    meta:
+        author = "Douglas Poerschke Rocha"
+        description = "malware familia 2 https://lpro/MAL/mal.php?mal=10"
+	reference = "https://lpro/MAL/mal.php?mal=10"
+	date = "2017-06-30"
+    strings:
+	$s1 = "doido1010" wide
+	$s2 = ":1NF0:BB:" wide
+	$s3 = "C0Mpl3t4" wide
+	$s4 = "M3RC4D0-P4G0" wide
+	$s5 = "L0G1N-M3C4DO-PG0" wide
+	$s6 = "EM41L:" wide
+	$s7 = ":S3NH4:." wide
+	$s8 = ":Cr3d_c4rd3:" wide
+	$s9 = ":Cr3d-c4rd." wide
+	$s10 = "N4O ESQU3C3 D0" wide
+	$s11 = "C3P3F3" wide
+	$s12 = "N45C1mt0" wide
+	$s13 = "N45C1mt0"
+	$s14 = "C4rt.c" wide
+	$s15 = "C0d.S3g" wide
+	$s16 = "V4l:." wide
+	$s17 = ":S33nnh4:" wide
+	$s18 = " um AmEx" wide
+	$s19 = " um Visa" wide
+	$s20 = "dantasholl" wide
+	$s21 = ":S4NT4S:." wide
+	$s22 = ":C0-P0-F0" wide
+	$s23 = ":3rr3g3" wide
+	$s24 = "::N4s:." wide
+	$s25 = "::d3d3d3:.." wide
+	$s26 = ":Ph0on3:.." wide
+	$s27 = "::s.C4rt:" wide
+	$s28 = "::s.C4rt.c:" wide
+	$s29 = ":S.3ntr4:" wide
+	$s30 = ".:T4B3L4:." wide
+	$s31 = "V0C3S P3D1U 3 0 C0D3R" wide
+	$s32 = "c0Mpl3TINH4S" wide
+	$s33 = "T4B3LINHA" wide
+	$s34 = "DECO_COS" wide
+	$s35 = ":1nfocc:" wide
+	$s36 = "X4V3S" wide
+	$s37 = ":C0NT4:" wide
+	$s38 = ".:Cds3g:." wide
+	$s39 = "P4-y-p4L" wide
+	$s41 = ".:Paypas.." wide
+	$s42 = "KVLc0d3" wide
+	$s43 = "333020686f726173" wide
+	$s44 = "001- Conta Corrente - P.F"
+	$s45 = "002- Conta Simples - P.F"
+	$s46 = "003- Conta Corrente - P.Jur"
+	$s47 = "006- Entidades P"
+	$s48 = "007- Dep. Institui"
+	$s49 = "013- Poupan"
+	$s50 = "022- Poupan"
+	$s51 = "        doido1010"
+	$s52 = "TP4GSEGU_SEGU"
+	$s53 = "P4GSEGU_SEGU"
+	$s54 = "EDTPAGSEN1"
+	$s55 = "TPay_pasForm"
+	$s56 = "Pay_pasForm"
+	$s57 = "BTNPAYLOGClick"
+	$s58 = "EDTPAYEMAIL"
+	$s59 = "Se_a_ra_Zar"
+	$s60 = "BTNSEARAClick"
+	$s61 = "EDTSENHSEARA"
+	$s62 = "TS_4T_t4_n44_s"
+	$s63 = "S_4T_t4_n44_s"
+
+    condition:
+        5 of ($s*)
+}
+

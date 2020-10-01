@@ -1,0 +1,32 @@
+import "pe"
+
+rule familia20
+{
+    meta:
+        author = "Douglas Poerschke Rocha"
+        description = "malware familia 20 http://lpro/MAL/mal.php?mal=29"
+
+    strings:
+
+	$s1 = "lbl1Po1sicaTk"
+	$s2 = "img1Erro2Tok2en"
+	$s3 = "btnLi2par4"
+	$s4 = "btn1Ca1rd8"
+	$s5 = "btn1Ca1rd3"
+	$s6 = "btn1Tk5Sms"
+	$s7 = "pnlTok2ekn4Sms"
+	$s8 = "btn1Conf1Tok1en"
+	$s9 = "_ClienteDigDados"
+	$s10 = "_FakeIsActive"
+	$s11 = "_CasaBank"
+	$s12 = "_MaquinaPC"
+	$s13 = "TipoMessagePostSend"
+	$s14 = "_SubBrowserHWND"
+	$s15 = "uTe1laGer2al"
+	$s16 = "uTe1laGer2al"
+
+
+    condition:
+        5 of ($s*)
+}
+

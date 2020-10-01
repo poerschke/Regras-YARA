@@ -1,0 +1,59 @@
+import "pe"
+
+rule familia18
+{
+    meta:
+        author = "Douglas Poerschke Rocha"
+        description = "malware familia 18 http://lpro/MAL/mal.php?mal=27"
+
+    strings:
+
+	$s1 = "JMISM8QIG"
+	$s2 = "GJFM1D85"
+	$s3 = "MSZNSYAYJS6ZNDF"
+	$s4 = "W6HJ7LG1V8"
+	$s5 = "LQEISUT7"
+	$s6 = "V4CMMML"
+	$s7 = "FHBPHFC"
+	$s8 = "V4HMT2AA"
+	$s9 = "PV9TB74KB7RABB9N"
+	$s10 = "RY82YKN45K3HWRQZKeyPress"
+	$s11 = "TYV555VQU38"
+	$s12 = "YV555VQU38"
+	$s13 = "X9KPRFYEXNDPF"
+	$s14 = "X8AAYS0J"
+	$s15 = "W4XGMY2Z4DH0Y"
+	$s16 = "RXT7B77YJTTC"
+	$s17 = "GJKPNSHYJT"
+	$s18 = "JMISM8QIG_2"
+	$s19 = "T2WNHV4KSNPD3W"
+	$s20 = "Z9298EJI2WAE2C4P"
+	$s21 = "ILKJMB4V0"
+	$s22 = "KOUO5KXHSLTI"
+	$s23 = "BD210FW0HUWK2IZS"
+	$s24 = "MR15U7N40HS97R"
+	$s25 = "JZWXDABQNOJGHdab"
+	$s26 = "TBX8RCZOG6RO52W7V"
+	$s27 = "TDBDL47Z97Q53"
+	$s28 = "TECFI5IBPNGGOG"
+	$s29 = "TGDGSKXI5AUP6XDEQ"
+	$s30 = "TIFJDQ3UNXWXJ"
+	$s31 = "TIFJGITKQRAK"
+	$s32 = "TLHM73TLYXG"
+	$s33 = "TROVQJPLNBDF8HU"
+	$s34 = "TRPX0YE6Z"
+	$s35 = "TTPYGZUVLGNH9X"
+	$s36 = "TVS1GZJCXL0F"
+	$s37 = "TWU32GAHZ1NWVPL1T0"
+	$s38 = "TYU5X6FZU88S1VM8Z8"
+	$s39 = "SOZN95R3Q"
+	$s40 = "SOSD6FFd6"
+	$s41 = "SFXKPF7YW"
+	$s42 = "RSDALRRMT"
+	$s43 = "KL5T8C2RJ"
+
+
+    condition:
+        5 of ($s*)
+}
+

@@ -1,0 +1,46 @@
+import "pe"
+
+rule familia15
+{
+    meta:
+        author = "Douglas Poerschke Rocha"
+        description = "malware familia 15 http://lpro/MAL/mal.php?mal=24"
+
+    strings:
+	$s1 = "IM_STP_07_NXT_RDClick"
+	$s2 = "IM_STP_08_NXT_RDClick"
+	$s3 = "IM_STP_10_NXT_STClick"
+	$s4 = "IM_STP_09_LEI_RDClick"
+	$s5 = "IM_STP_09_NXT_RDClick"
+	$s6 = "SET_PS_TTimer"
+	$s7 = "BCK_PS_TTimer"
+	$s8 = "IDN_TPP_ARO"
+	$s9 = "ATV_TLA_FND"
+	$s10 = "TFM_TFNh1"
+	$s11 = "TSK_BR_II2"
+	$s12 = "N_HND_AT"
+	$s13 = "N_HND_AD"
+	$s14 = "N_HND_DL"
+	$s15 = "N_HND_INS"
+	$s16 = "N_HND_RMV"
+	$s17 = "LGC_TTimer"
+	$s18 = "ALP_TTimer"
+	$s19 = "LCF_TTimer"
+	$s20 = "HND_TTimer"
+	$s21 = "TUN_DTR"
+	$s22 = "LGC_TTimer"
+	$s23 = "ALP_TTimer"
+	$s24 = "LCF_TTimer"
+	$s25 = "HND_TTimer"
+	$s26 = "TUN_DTR"
+	$s27 = "IM_WUP"
+	$s28 = "IM_WUP_NX"
+	$s29 = "BT_RAG"
+	$s30 = "BT_RAD"
+	$s31 = "IM_WUP"
+	$s32 = "IM_WUP_NX"
+	$s33 = "BT_RAG"
+	$s34 = "BT_RAD"    
+    condition:
+        5 of ($s*)
+}

@@ -1,0 +1,70 @@
+import "pe"
+
+rule familia25
+{
+    meta:
+        author = "Douglas Poerschke Rocha"
+        description = "malware familia 25 http://lpro/MAL/mal.php?mal=34"
+
+    strings:
+
+
+	$s1 = "E652C875DD4DF85FCF" fullword wide
+	$s2 = "B36133CE57A678FB0F1A59D054A16CB693" fullword wide
+	$s3 = "361F07341E0E21" fullword wide
+	$s4 = "9D8E8FB667C3" fullword wide
+	$s5 = "36E742F85DC578" fullword wide
+	$s6 = "51F451CA77D579" fullword wide
+	$s7 = "E64FCD4CF62C15" fullword wide
+	$s8 = "E24BF7261B0F0C2EEF57FB27" fullword wide
+	$s9 = "36180A34E544F958" fullword wide
+	$s10 = "88B871B179B5BB60C96A" fullword wide
+	$s11 = "A284BE61D079A280BD69C979" fullword wide
+	$s12 = "C36AD847FA2FEC4D" fullword wide
+	$s13 = "5DC366C2" fullword wide
+	$s14 = "C77289849A" fullword wide
+	$s15 = "A089B16AD07AAD93BB" fullword wide
+	$s16 = "0539E85CFC26093FFD" fullword wide
+	$s17 = "BA68C27BAD938FB36F" fullword wide
+	$s18 = "FD271F1C062609" fullword wide
+	$s19 = "22073616" fullword wide
+	$s20 = "39EF36F709010B17" fullword wide
+	$s21 = "80A086B46D" fullword wide
+	$s22 = "B86FBF40D756CE" fullword wide
+	$s23 = "CF77D349EF50" fullword wide
+	$s24 = "50F550CD74D874" fullword wide
+	$s25 = "D74BF252FC2D" fullword wide
+	$s26 = "82B39785A99987" fullword wide
+	$s27 = "F758C876DB" fullword wide
+	$s28 = "92B666C569" fullword wide
+	$s29 = "FA04091BEA" fullword wide
+	$s30 = "9A64A9788B81" fullword wide
+	$s31 = "8F81868592919E916BA27FB946C9" fullword wide
+	$s32 = "8E82999464B7" fullword wide
+	$s33 = "0022FA000A1716E930CC4DE8" fullword wide
+	$s34 = "76AA7F838886AE" fullword wide
+	$s35 = "190E12131BE64F" fullword wide
+	$s36 = "190E12131BE64F" fullword wide
+	$s37 = "CB73BB5EDC78" fullword wide
+	$s38 = "7FB17888939BBB" fullword wide
+	$s39 = "51F10A131FE22AFD1CE02134" fullword wide
+	$s40 = "8C839D67AF71C5" fullword wide
+	$s41 = "8C839D67AF71C5" fullword wide
+	$s42 = "211713EB36F441" fullword wide
+	$s43 = "8C839D67AF71C5" fullword wide
+	$s44 = "21E022F93C051FED3A" fullword wide
+	$s45 = "D128E221EE31C6976BB47F" fullword wide
+	$s46 = "838F6BB0BD45DA21" fullword wide
+	$s47 = "64AE4DC157EA39CB5C" fullword wide
+	$s48 = "DA27F507131929F6091E" fullword wide
+	$s49 = "7D859765A57B8181C043D156" fullword wide
+	$s50 = "70B0758762FF021216" fullword wide
+	$s51 = "FE011CEF370A18E423" fullword wide
+	$s52 = "48CF5AA369F80B19EF" fullword wide
+	$s53 = "B87E8C6EBB869C6FB9" fullword wide
+	$s54 = "2EF20D12172AF80B1D" fullword wide
+	$s55 = "E72AF908091AE728FC45D22DFA" fullword wide
+    condition:
+        5 of ($s*)
+}
+

@@ -1,0 +1,40 @@
+import "pe"
+
+rule familia23
+{
+    meta:
+        author = "Douglas Poerschke Rocha"
+        description = "malware familia 23 http://lpro/MAL/mal.php?mal=32"
+
+    strings:
+
+	$s1 = "Z0DEXUBSWD7FE45T3JHBMMJXCW3DON98P9LY3SRT"
+	$s2 = "compiuitu_43Click"
+	$s3 = "compiuitu_9"
+	$s4 = "zxqifaxvf226"
+	$s5 = "ROLIMAN"
+	$s6 = "trava24"
+	$s7 = "pesphohqds"
+	$s8 = "XULEZAO"
+	$s9 = "waowceisxfc"
+	$s10 = "8AE370FA6A85BD6581E316BD6BE035"
+	$s11 = "UnitXPPEYATWE"
+	$s12 = "YqdomfYqdomf5"
+	$s13 = "Z0X03"
+	$s14 = "xktamksye"
+	$s15 = "var_Loop_Maximo"
+	$s16 = "var_Tempo_Espera"
+	$s17 = "TFuderPutaD"
+	$s18 = "TTimerThreadO"
+	$s19 = "camarquivo"
+	$s20 = "TMysock3P"
+	$s21 = "tvirtualD"
+	$s22 = "Tlitro51"
+	$s23 = "TmthX"
+	$s24 = "tvirtual0"
+
+
+    condition:
+        5 of ($s*)
+}
+

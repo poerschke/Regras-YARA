@@ -1,0 +1,56 @@
+// Copyright (C) 2010-2014 Cuckoo Foundation.
+// This file is part of Cuckoo Sandbox - http://www.cuckoosandbox.org
+// See the file 'docs/LICENSE' for copying permission.
+
+import "pe"
+
+rule familia1
+{
+    meta:
+        author = "Douglas Poerschke Rocha"
+        description = "malware familia 1 https://lpro/MAL/mal.php?mal=9"
+
+    strings:
+	$s1 = "L97LNCW2QVGWR23CUBGZK385JZZ1KRPU0" fullword wide 
+	$s2 = "B259F1528AA55BEB6A9A" fullword wide
+	$s3 = "bostarala" fullword wide
+	$s4 = "4E8EC40720C077B3152FF510" fullword wide
+	$s5 = "tokensmsita" fullword wide
+	$s6 = "0122BA1ACA74A153F70820C364" fullword wide
+	$s7 = "marlonbrando" fullword wide
+	$s8 = "B259F1528AA55BEB6A9A" fullword wide
+	$s9 = "bostarala" fullword wide
+	$s10 = "7396CE7EAF52F037" fullword wide
+	$s11 = "gazelao" fullword wide
+	$s12 = "4CF5528C4DE00038995F9643FF21BC1F" fullword wide
+	$s13 = "muitabostamesmo" fullword wide
+	$s14 = "0EC814BE78924FEC57EA37D817" fullword wide
+	$s15 = "vduudylxdvhg" fullword wide
+	$s16 = "6C98C20F3FE60BD50ED6" fullword wide
+	$s17 = "hcudiawfy" fullword wide
+	$s18 = "DF658AE464E366EF091F2E3DDB71" fullword wide
+	$s19 = "INICIARKEYLOG" fullword wide
+	$s20 = "A1BB1CB4649841FF48FC" fullword wide
+	$s21 = "Vigsrigze" fullword wide
+	$s22 = "B1B63CB2B94DCD778BB152D44FCC" fullword wide
+	$s23 = "INICIARBURACO" fullword wide
+	$s24 = "7488EE75F278FA1D7CEF1322342546" fullword wide
+	$s25 = "POSICAO1BURACO" fullword wide
+	$s27 = "6E86D176944A" fullword wide
+	$s28 = "NOVO VISUAL DO SITE" fullword wide
+	$s29 = "1D031A70DC65F7195A2BD766EE166582E17380E761E1057295" fullword wide
+	$s31 = "59F957F720CF7D" fullword wide
+	$s33 = "2FC712B355F722" fullword wide
+	$s34 = "5BFB568CB05783" fullword wide
+	$s35 = "sephi" fullword wide
+	$s36 = "1DC31348F229D81FB6" fullword wide
+	$s37 = "rflvtroe" fullword wide
+	$s38 = "42D27FD07691BF78" fullword wide
+	$s39 = "shiiko" fullword wide
+	$s41 = "17C4164EF31030" fullword wide
+	$s42 = "qjcqjc" fullword wide
+
+    condition:
+        5 of ($s*)
+}
+

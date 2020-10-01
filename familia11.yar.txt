@@ -1,0 +1,30 @@
+import "pe"
+
+rule familia11
+{
+    meta:
+        author = "Douglas Poerschke Rocha"
+        description = "malware familia 11 http://lpro/MAL/mal.php?mal=19"
+
+    strings:
+	$s1 = "MPq9o9o+R2Wo8c3qXafTy5GDfdiUn8CB"
+	$s2 = "JgCj8llCvh4qvFhjXGQXt2ZRAdpbLBfo0EE="
+	$s3 = "NvJgaMHsr8Q8HdJ2JZuX7e2u5hsTmdw2"
+	$s4 = "NvJgaMHsr8Q8HZ8On8EXt6g0"
+	$s5 = "IpXWSm1yauz7/M/VO4ELRyMtHvw="
+	$s6 = "6D656761746F6E69636132303031"
+	$s7 = "FszR3g=="
+	$s8 = "Brnrzd2r"
+	$s9 = "BrnrzdcPL/+eWg=="
+	$s10 = "JQB4383n"
+	$s11 = "FszR3iXYmgI="
+	$s12 = "AqiG66ja"
+	$s13 = "OlYC04PYIMDCwrn6Zqy+fzXXqXZzKAE9"
+	$s14 = "A8EDhJ33H4MpK3/o4APVSkstPLPHvdQyUE7GRJqvW49f+A=="
+	$s15 = "Fsz2W3o6ucvuaWXWAmGLS3WnbKkRv2DZICiYR6Tp"
+	$s16 = "HZbdiPmAW4jO/fyoIWSu1ekV3nU="
+	$s17 = "PwfUJ+w5BENdoNHAP2TFfRAN"
+
+    condition:
+        any of them
+}

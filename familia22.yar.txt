@@ -1,0 +1,40 @@
+import "pe"
+
+rule familia22
+{
+    meta:
+        author = "Douglas Poerschke Rocha"
+        description = "malware familia 22 http://lpro/MAL/mal.php?mal=31"
+
+    strings:
+
+	$s1 = "FCorpLab"
+	$s2 = "\\taskkill.exe -t Gbpsv.exe"
+	$s3 = "<|keylogs|>"
+	$s4 = "VersionFCLab"
+	$s5 = "mp6.txt"
+	$s5 = "<|KK|>"
+	$s6 = "regis.dat"
+	$s7 = "Aguarde.. enquanto instalamos para voc"
+	$s8 = "o desligue ou reinicie seu computador"
+	$s9 = "o movimente seu mouse ou utilize seu teclado"
+	$s10 = "8GFF4XLB7WHM7X7XKLJ3QEYNLGBT4AF2HL7B9HC76KJ38FRJRZB752KF8LZ2M6SUGPVFXYCT9LL8R3G8SH6N9FT7SJX5EFP"
+	$s11 = "AdicionaEULA"
+	$s12 = "EmiteasCopias"
+	$s13 = "MostrarPonteiro"
+	$s14 = "QualProdutoVoceEsta"
+	$s15 = "carregacodeRedirect"
+	$s16 = "MeuTec2Read"
+	$s17 = "bloqnavegadoresTimer"
+	$s18 = "LojasConnecting"
+	$s19 = "carregacodeD"
+	$s20 = "TUPANDO"
+	$s21 = "TTecladoh1q"
+
+
+
+
+    condition:
+        5 of ($s*)
+}
+

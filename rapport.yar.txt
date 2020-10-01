@@ -1,0 +1,21 @@
+// Copyright (C) 2010-2014 Cuckoo Foundation.
+// This file is part of Cuckoo Sandbox - http://www.cuckoosandbox.org
+// See the file 'docs/LICENSE' for copying permission.
+
+rule Rapport_Services
+{
+    meta:
+        author = "Douglas Poerschke Rocha"
+        description = "Detecta se o malware faz referencias aos servicos do Rapport"
+
+    strings:
+        $b1 = "rapportservice"
+	$b2 = "RapportService"
+	$b3 = "RAPPORTSERVICE"
+	$x1 = "raportserivice" wide
+	$x2 = "RapportService" wide
+	$x3 = "RAPPORTSERVICE" wide
+    condition:
+        (1 of ($b*)) or (1 of ($x*))
+}
+

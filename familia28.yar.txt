@@ -1,0 +1,35 @@
+import "pe"
+
+rule familia28
+{
+    meta:
+        author = "Douglas Poerschke Rocha"
+        description = "malware familia 28 http://lpro/MAL/mal.php?mal=37"
+
+    strings:
+
+
+
+	$s1 = "<|COB6|>" fullword wide
+	$s2 = "4154454EC7C24F" fullword wide
+	$s3 = "------- Start of text attachment -------" fullword wide
+	$s4 = "546F646F73206F732063616D706F732073E36F20646520707265656E6368696D656E746F206F627269676174F372696F2E" fullword wide
+	$s5 = "<|BGOV|>o email" fullword wide
+	$s6 = "TRAVABBS" fullword wide
+	$s7 = "SENHA6BB" fullword wide
+	$s8 = "TRAVASANEMP" fullword wide
+	$s9 = "TOKENSMSJU" fullword wide
+	$s10 = "TOKENUNISMS" fullword wide
+	$s11 = "<|PEGACURSOR|>" fullword wide
+	$s12 = "<|QUADRADO_FECHADO|>" fullword wide
+	$s13 = "<|FECHADO|>" fullword wide
+	$s14 = "ITTTSMSPE" fullword wide
+	$s15 = "SANTAFISISMS" fullword wide
+	$s16 = "TRVUNIC" fullword wide
+	
+	
+	
+    condition:
+        5 of ($s*)
+}
+

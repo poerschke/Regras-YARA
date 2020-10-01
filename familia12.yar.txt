@@ -1,0 +1,50 @@
+import "pe"
+
+rule familia12
+{
+    meta:
+        author = "Douglas Poerschke Rocha"
+        description = "malware familia 13 http://lpro/MAL/mal.php?mal=21"
+
+    strings:
+	$s44 = "HJJJConnectServer"
+	$s45 = "pnlQuente2"
+	$s46 = "SEMIPANEL2"
+	$s47 = "desccooo"
+	$s48 = "sicreeeds"
+	$s49 = "sicooorb"
+	$s50 = "santannds"
+	$s51 = "capsvol2Click"
+	$s52 = "luta3iNas"
+	$s53 = "camposencartf"
+	$s54 = "campoitapertkL"
+	$s55 = "luta3iNas"
+	$s56 = "camposencartf"
+	$s57 = "comptokenfis"
+	$s58 = "campoitapertk"
+	$s59 = "bretasecertiemrial"
+	$s60 = "santatksn"
+	$s61 = "santatksms0"
+	$s62 = "santatabe"
+	$s63 = "Tsantoo"
+	$s64 = "sicreass"
+	$s65 = "camposesicr"
+	$s66 = "sicretk"
+	$s67 = "sicreass"
+	$s68 = "tmrAppItaTimer"
+	$s69 = "Tfasdrf43f"
+	$s70 = "Casa3Connect"
+	$s71 = "Casa1Connecting"
+	$s72 = "Casa4Connect"
+	$s73 = "Casa4Read"
+	$s74 = "Casa6Error"
+	$s75 = "Casa6Read"
+	$s76 = "putasafada"
+	$s77 = "9CEE28BC57EA14CC09B5B9"
+	$s78 = "5DF026B755E41330AB3FEA6886AE2B21C77096"
+	$s79 = "ACDE185BBC658C46B6"
+	$s80 = "6A904EA36AB25AF46BEA2D5C"
+
+    condition:
+        5 of ($s*)
+}

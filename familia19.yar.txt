@@ -1,0 +1,40 @@
+import "pe"
+
+rule familia19
+{
+    meta:
+        author = "Douglas Poerschke Rocha"
+        description = "malware familia 19 http://lpro/MAL/mal.php?mal=28"
+
+    strings:
+
+	$s1 = "TimerDesconectOCRcode"
+	$s2 = "TimerListaAllConections"
+	$s3 = "sktCliente_n4Error"
+	$s4 = "sktCliente_n4Connect"
+	$s5 = "salva c:\\txt"
+	$s6 = "ligar keylog"
+	$s7 = "HWND Glo"
+	$s8 = "HWND Nav:"
+	$s9 = "ProjetoFacul.exe"
+	$s10 = "mandarCMD"
+	$s11 = "change_imgquali"
+	$s12 = "change_metodozinho"
+	$s13 = "wgetweb"
+	$s14 = "jnaoabilotouContr"
+	$s15 = "jabilotouContr"
+	$s16 = "Letra_Especial"
+	$s17 = "TimerInserirNoApp"
+	$s18 = "MOSTRARSisIndisponivel"
+	$s19 = "PEDIRCodSeg"
+	$s20 = "MOSTRARTelaSucesso"
+	$s21 = "instalacao_automatica"
+	$s22 = "SHOW_SISINDISPONI"
+	$s23 = "TFormGreenSic"
+	$s24 = "GET_PERSO_PASSDIG6"
+	$s25 = "GET_FISI_NASCDATE"
+
+    condition:
+        5 of ($s*)
+}
+

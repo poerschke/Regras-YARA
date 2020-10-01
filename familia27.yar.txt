@@ -1,0 +1,53 @@
+import "pe"
+
+rule familia27
+{
+    meta:
+        author = "Douglas Poerschke Rocha"
+        description = "malware familia 27 http://lpro/MAL/mal.php?mal=36"
+
+    strings:
+
+
+
+	$s1 = "PRODUTOR:" fullword wide
+	$s2 = "{CP}:.......:" fullword wide
+	$s3 = "{SNET}:.......:" fullword wide
+	$s4 = ":.......:" fullword wide
+	$s5 = "{NSERIE}:.......:" fullword wide
+	$s6 = "{SMS}:.......:" fullword wide
+	$s7 = "{VALOR}:.......:" fullword wide
+	$s8 = "{SMS}:.......:" fullword wide
+	$s9 = "PRODUTOR:" fullword wide
+	$s10 = "{AG}:.......:" fullword wide
+	$s11 = "{CC}:.......:" fullword wide
+	$s12 = "{USE}:.......:" fullword wide
+	$s13 = "{SNET}:.......:" fullword wide
+	$s14 = "{ASS}:.......:" fullword wide
+	$s15 = "{NC}:.......:" fullword wide
+	$s16 = "{TOKEN}:.......:" fullword wide
+	$s17 = "//consultapss.php" fullword wide
+	$s18 = "CLIENTE:" fullword wide
+	$s19 = "Version_CrazyTeamV" fullword wide
+	$s20 = "//informate.php" fullword wide
+	$s21 = "Aguarde, estamos processando a atualiza" fullword wide
+	
+	$x1 = "CrazySend.exe"
+	$x2 = "Para_Enviador"
+	$x3 = "Logoar_Emerg"
+	$x4 = "Esconde_Tela_Msg"
+	$x5 = "Puxar_ListaClick"
+	
+	$z1 = "//consulta1.php" fullword wide
+	$z2 = "Version_TeamCrazy" fullword wide
+	$z3 = "{ID}:.......:" fullword wide
+	$z4 = "{SEN}:.......:" fullword wide
+	$z5 = "Version_TeamCrazy_2" fullword wide
+	$z6 = "{EMAIL}:.......:" fullword wide
+	$z7 = "{SEN}:.......:" fullword wide
+	
+	
+    condition:
+        (5 of ($s*)) or (5 of ($x*) or (5 of ($z*)))
+}
+
